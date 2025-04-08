@@ -31,7 +31,7 @@ Users can draw a digit on a virtual whiteboard, and the app will predict what nu
 
 The app uses a **Convolutional Neural Network (CNN)** trained on the MNIST dataset for better spatial understanding of drawn digits.
 
-Model Architecture (example):
+Model Architecture:
 
 ```python
 model = Sequential([
