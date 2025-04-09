@@ -30,17 +30,3 @@ Users can draw a digit on a virtual whiteboard, and the app will predict what nu
 ## 🧠 Model Info
 
 The app uses a **Convolutional Neural Network (CNN)** trained on the MNIST dataset for better spatial understanding of drawn digits.
-
-Model Architecture:
-
-```python
-model = Sequential([
-    Conv2D(32, (3,3), activation='relu', input_shape=(28,28,1)),
-    MaxPooling2D((2,2)),
-    Conv2D(64, (3,3), activation='relu'),
-    MaxPooling2D((2,2)),
-    Flatten(),
-    Dropout(0.5),
-    Dense(128, activation='relu'),
-    Dense(10, activation='softmax')
-])
