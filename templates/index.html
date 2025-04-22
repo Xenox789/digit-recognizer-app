@@ -16,7 +16,7 @@
     </style>
 </head>
 <body>
-    <h2>Draw a digit (0–9) below 👇</h2>
+    <h2>Draw a digit (0–9) below:</h2>
     <canvas id="canvas" width="280" height="280"></canvas><br>
     <button onclick="clearCanvas()">Clear</button>
     <button onclick="predictDigit()">Predict</button>
@@ -55,7 +55,7 @@
         };
     
         function clearCanvas() {
-            ctx.fillStyle = 'white'; // Refill with white when clearing
+            ctx.fillStyle = 'white';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             ctx.beginPath();
             document.getElementById('result').innerText = '';
@@ -73,10 +73,10 @@
             })
             .then(response => response.json())
             .then(data => {
-                document.getElementById('result').innerText = `🧠 Prediction: ${data.prediction}`;
+                document.getElementById('result').innerText = `Prediction: ${data.prediction}`;
             })
             .catch(error => {
-                document.getElementById('result').innerText = '❌ Error predicting digit.';
+                document.getElementById('result').innerText = 'Error predicting digit.';
                 console.error('Prediction error:', error);
             });
         }
